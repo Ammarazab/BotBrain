@@ -84,7 +84,9 @@ export function Sidebar() {
 
   // Get language emoji based on current language
   const getLanguageEmoji = () => {
-    return language === 'en' ? '🇬🇧' : '🇧🇷';
+    if (language === 'en') return '🇬🇧';
+    if (language === 'ar') return '🇸🇦';
+    return '🇧🇷';
   };
 
   // Handle escape key to close panels

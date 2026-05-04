@@ -396,3 +396,40 @@ a:hover {
 .dark .bg-white.dark\:bg-botbot-darker {
   background-color: color-mix(in srgb, var(--theme-primary-darker, #1A0F29) 97%, var(--theme-primary, #821db7) 3%);
 }
+
+/* ==========================================================================
+   RTL (Arabic) language support
+   - Mirror the page direction without breaking absolutely positioned UI,
+     animations, or component-level transforms.
+   ========================================================================== */
+html[dir='rtl'] body {
+  text-align: right;
+}
+
+/* Use logical text alignment so utility-aligned content still respects dir */
+html[dir='rtl'] .text-left {
+  text-align: right;
+}
+html[dir='rtl'] .text-right {
+  text-align: left;
+}
+
+/* Keep numeric, code-like, and bidi-sensitive content readable inside RTL */
+html[dir='rtl'] input[type='number'],
+html[dir='rtl'] input[type='email'],
+html[dir='rtl'] input[type='url'],
+html[dir='rtl'] input[type='tel'],
+html[dir='rtl'] code,
+html[dir='rtl'] pre,
+html[dir='rtl'] .font-mono {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: embed;
+}
+
+/* Preserve Arabic typography quality */
+html[dir='rtl'] body {
+  font-family: var(--font-work-sans), 'Segoe UI', Tahoma, 'Noto Sans Arabic',
+    'Geeza Pro', system-ui, sans-serif;
+}
+

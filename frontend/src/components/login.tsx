@@ -243,7 +243,7 @@ export default function Login() {
             className="flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2.5 rounded-full bg-white/80 dark:bg-botbot-dark/80 backdrop-blur-lg border border-white/20 dark:border-botbot-purple/20 shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
             aria-label="Select language"
           >
-            <span className="text-lg sm:text-xl">{language === 'en' ? '🇬🇧' : '🇧🇷'}</span>
+            <span className="text-lg sm:text-xl">{language === 'en' ? '🇬🇧' : language === 'ar' ? '🇸🇦' : '🇧🇷'}</span>
             <svg
               className={`w-4 h-4 text-gray-600 dark:text-gray-300 transition-transform duration-200 ${showLanguageDropdown ? 'rotate-180' : ''}`}
               fill="none"
@@ -270,8 +270,8 @@ export default function Login() {
                       : 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-botbot-darker/50'
                   }`}
                 >
-                  <span className="text-xl">{code === 'en' ? '🇬🇧' : '🇧🇷'}</span>
-                  <span className="text-sm">{code === 'en' ? 'English' : 'Português'}</span>
+                  <span className="text-xl">{code === 'en' ? '🇬🇧' : code === 'ar' ? '🇸🇦' : '🇧🇷'}</span>
+                  <span className="text-sm">{code === 'en' ? 'English' : code === 'ar' ? 'العربية' : 'Português'}</span>
                   {language === code && (
                     <svg className="w-4 h-4 ml-auto text-botbot-purple dark:text-botbot-accent" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />

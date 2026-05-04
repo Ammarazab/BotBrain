@@ -54,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" dir="ltr" className="h-full" suppressHydrationWarning>
       <body
         className={`${workSans.variable} ${workSans.className} antialiased h-full m-0 p-0`}
       >
