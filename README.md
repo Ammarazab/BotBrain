@@ -29,6 +29,7 @@
   <a href="docs/i18n/README_fr.md"><img src="https://img.shields.io/badge/🇫🇷_Français-blue" alt="Français"></a>
   <a href="docs/i18n/README_zh-CN.md"><img src="https://img.shields.io/badge/🇨🇳_中文-blue" alt="中文"></a>
   <a href="docs/i18n/README_es.md"><img src="https://img.shields.io/badge/🇪🇸_Español-blue" alt="Español"></a>
+  <a href="docs/i18n/README_ar.md"><img src="https://img.shields.io/badge/🇸🇦_العربية-blue" alt="العربية"></a>
 </p>
 
 # BotBrain Open Source (BBOSS) <img src="docs/images/bot_eyes.png" alt="🤖" width="50" style="vertical-align: middle;">
