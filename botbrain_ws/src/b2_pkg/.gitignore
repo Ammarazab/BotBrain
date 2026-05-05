@@ -2,3 +2,7 @@
 # Large map files
 maps/*.db
 maps/*.pgm
+
+# Python build artifacts
+__pycache__/
+*.pyc
