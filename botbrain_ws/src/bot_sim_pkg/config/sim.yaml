@@ -1,0 +1,19 @@
+# Default tunables for bot_sim_pkg. The actual launch reads
+# robot_config.yaml at the workspace root for robot_model/robot_name;
+# values here are sim-only knobs.
+
+sim:
+  shim:
+    publish_rate_hz: 50.0      # /lf/sportmodestate publish rate
+    battery_voltage: 28.0      # fake battery voltage reported via LowState
+    battery_soc: 95            # fake state-of-charge percentage
+
+  gazebo:
+    world: empty.sdf           # under bot_sim_pkg/worlds/
+    initial_z: 0.45            # spawn height above ground
+
+  isaac:
+    physics_rate_hz: 200.0
+    use_isaac_lab_policy: true # when Isaac Lab is installed, use its RL policy
+
+  cmd_vel_topic: /sim/cmd_vel  # shim → sim locomotion command bus
