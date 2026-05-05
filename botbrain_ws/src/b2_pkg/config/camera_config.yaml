@@ -1,0 +1,27 @@
+camera_configuration:
+  front:
+    type: ""
+    serial_number: ""
+    parent_frame: "botbrain_base"
+    child_frame: "front_camera_link"
+    # B2 dorsal plate is larger than Go2; the BotBrain frame sits a bit
+    # further forward and higher above the trunk.
+    tf:
+      x: 0.20
+      y: 0.020
+      z: 0.060
+      roll: 0
+      pitch: 0
+      yaw: 0
+  back:
+    type: ""
+    serial_number: ""
+    parent_frame: "botbrain_base"
+    child_frame: "back_camera_link"
+    tf:
+      x: -0.20
+      y: -0.020
+      z: 0.060
+      roll: 0
+      pitch: 0
+      yaw: 3.14159

@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<!--
+    Constants for the Unitree B2 quadruped.
+
+    Values come from Unitree's published specs and the open-source
+    URDF in https://github.com/unitreerobotics/unitree_ros2 (b2_description).
+    If you replace the meshes/URDF with the official B2 description,
+    please keep these properties in sync.
+
+    Reference: https://support.unitree.com/home/en/B2_developer
+-->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- Constants for robot dimensions -->
+    <xacro:property name="PI" value="3.1415926535897931"/>
+    <xacro:property name="stick_mass" value="0.00001"/>
+
+    <!-- Simplified collision values (B2 trunk is ~1.10m long, 0.45m wide, 0.16m tall). -->
+    <xacro:property name="trunk_width"  value="0.180"/>
+    <xacro:property name="trunk_length" value="0.700"/>
+    <xacro:property name="trunk_height" value="0.180"/>
+    <xacro:property name="hip_radius" value="0.080"/>
+    <xacro:property name="hip_length" value="0.080"/>
+    <xacro:property name="thigh_shoulder_radius" value="0.075"/>
+    <xacro:property name="thigh_shoulder_length" value="0.060"/>
+    <xacro:property name="thigh_width"  value="0.050"/>
+    <xacro:property name="thigh_height" value="0.060"/>
+    <xacro:property name="calf_width"  value="0.030"/>
+    <xacro:property name="calf_height" value="0.030"/>
+    <xacro:property name="foot_radius" value="0.040"/>
+    <xacro:property name="stick_radius" value="0.020"/>
+    <xacro:property name="stick_length" value="0.40"/>
+
+    <!-- Kinematics (B2 thigh/calf are roughly twice the Go2 length). -->
+    <xacro:property name="thigh_offset" value="0.150"/>
+    <xacro:property name="thigh_length" value="0.350"/>
+    <xacro:property name="calf_length"  value="0.350"/>
+
+    <!-- Leg offset from trunk center. -->
+    <xacro:property name="leg_offset_x" value="0.3215"/>
+    <xacro:property name="leg_offset_y" value="0.072"/>
+    <xacro:property name="hip_offset"   value="0.150"/>
+
+    <!-- Offset of link locations (left front). -->
+    <xacro:property name="hip_offset_x" value="0.3215"/>
+    <xacro:property name="hip_offset_y" value="0.072"/>
+    <xacro:property name="hip_offset_z" value="0.0"/>
+
+    <xacro:property name="thigh_offset_x" value="0"/>
+    <xacro:property name="thigh_offset_y" value="0.150"/>
+    <xacro:property name="thigh_offset_z" value="0.0"/>
+
+    <xacro:property name="calf_offset_x" value="0.0"/>
+    <xacro:property name="calf_offset_y" value="0.0"/>
+    <xacro:property name="calf_offset_z" value="-0.350"/>
+
+    <!-- Joint limits. B2 motors are much stronger than Go2; values are
+         taken from Unitree's published B2 specification. -->
+    <xacro:property name="damping" value="0.0"/>
+    <xacro:property name="friction" value="0.0"/>
+    <xacro:property name="hip_position_max" value="0.87"/>
+    <xacro:property name="hip_position_min" value="-0.87"/>
+    <xacro:property name="hip_velocity_max" value="20.0"/>
+    <xacro:property name="hip_torque_max" value="200.0"/>
+    <xacro:property name="thigh_position_max" value="3.49"/>
+    <xacro:property name="thigh_position_min" value="-1.57"/>
+    <xacro:property name="thigh_velocity_max" value="20.0"/>
+    <xacro:property name="thigh_torque_max" value="200.0"/>
+    <xacro:property name="calf_position_max" value="-0.65"/>
+    <xacro:property name="calf_position_min" value="-2.72"/>
+    <xacro:property name="calf_velocity_max" value="15.0"/>
+    <xacro:property name="calf_torque_max" value="320.0"/>
+
+    <!-- Inertial values. B2 weighs ~60 kg total (~32 kg trunk). -->
+    <!-- Trunk -->
+    <xacro:property name="trunk_mass" value="32.0"/>
+    <xacro:property name="trunk_com_x" value="0.030"/>
+    <xacro:property name="trunk_com_y" value="0.00"/>
+    <xacro:property name="trunk_com_z" value="-0.010"/>
+    <xacro:property name="trunk_ixx" value="0.45"/>
+    <xacro:property name="trunk_ixy" value="0.0"/>
+    <xacro:property name="trunk_ixz" value="0.005"/>
+    <xacro:property name="trunk_iyy" value="2.20"/>
+    <xacro:property name="trunk_iyz" value="0.0"/>
+    <xacro:property name="trunk_izz" value="2.30"/>
+
+    <!-- Hip (left front) -->
+    <xacro:property name="hip_mass" value="2.30"/>
+    <xacro:property name="hip_com_x" value="-0.010"/>
+    <xacro:property name="hip_com_y" value="0.005"/>
+    <xacro:property name="hip_com_z" value="-0.0005"/>
+    <xacro:property name="hip_ixx" value="0.0050"/>
+    <xacro:property name="hip_ixy" value="0.0"/>
+    <xacro:property name="hip_ixz" value="0.0"/>
+    <xacro:property name="hip_iyy" value="0.0090"/>
+    <xacro:property name="hip_iyz" value="0.0"/>
+    <xacro:property name="hip_izz" value="0.0060"/>
+
+    <!-- Thigh -->
+    <xacro:property name="thigh_mass" value="3.40"/>
+    <xacro:property name="thigh_com_x" value="-0.005"/>
+    <xacro:property name="thigh_com_y" value="-0.030"/>
+    <xacro:property name="thigh_com_z" value="-0.060"/>
+    <xacro:property name="thigh_ixx" value="0.030"/>
+    <xacro:property name="thigh_ixy" value="0.0"/>
+    <xacro:property name="thigh_ixz" value="-0.001"/>
+    <xacro:property name="thigh_iyy" value="0.030"/>
+    <xacro:property name="thigh_iyz" value="0.002"/>
+    <xacro:property name="thigh_izz" value="0.006"/>
+
+    <!-- Calf -->
+    <xacro:property name="calf_mass" value="0.70"/>
+    <xacro:property name="calf_com_x" value="0.005"/>
+    <xacro:property name="calf_com_y" value="-0.001"/>
+    <xacro:property name="calf_com_z" value="-0.180"/>
+    <xacro:property name="calf_ixx" value="0.0080"/>
+    <xacro:property name="calf_ixy" value="0.0"/>
+    <xacro:property name="calf_ixz" value="0.0"/>
+    <xacro:property name="calf_iyy" value="0.0080"/>
+    <xacro:property name="calf_iyz" value="0.0"/>
+    <xacro:property name="calf_izz" value="0.0003"/>
+
+    <!-- Foot -->
+    <xacro:property name="foot_mass" value="0.20"/>
+
+</robot>
