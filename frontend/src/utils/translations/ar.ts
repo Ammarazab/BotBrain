@@ -355,7 +355,7 @@ export const arTranslations = {
     mySupportDescription: 'ممثل الدعم المخصص لك متاح للمساعدة في أي أسئلة أو مشكلات.',
     mySupportAvailability: 'متاح من الإثنين إلى الجمعة، 9 صباحًا - 6 مساءً',
     userManualTitle: 'دليل المستخدم',
-    userManualDescription: 'الوصول إلى الوثائق الشاملة والأدلة الخاصة بروبوت BotBrain.',
+    userManualDescription: 'الوصول إلى الوثائق الشاملة والأدلة الخاصة بروبوت EdNex Automation.',
     userManualViewButton: 'عرض دليل المستخدم',
     userManualFormat: 'صيغة PDF • آخر تحديث: ديسمبر 2024',
     safetyTipsTitle: 'نصائح السلامة العامة',
@@ -367,7 +367,7 @@ export const arTranslations = {
     safetyTip3Title: 'استخدم ضمن المواصفات',
     safetyTip3Description: 'شغّل الروبوت ضمن مواصفات الشركة المصنعة وتحت الإشراف في جميع الأوقات.',
     additionalHelpTitle: 'تحتاج إلى مزيد من المساعدة؟',
-    additionalHelpDescription: 'لم تجد ما تبحث عنه؟ فريق الدعم لدينا جاهز لمساعدتك في أي أسئلة حول BotBrain.',
+    additionalHelpDescription: 'لم تجد ما تبحث عنه؟ فريق الدعم لدينا جاهز لمساعدتك في أي أسئلة حول نظام EdNex Automation.',
     additionalHelpContactButton: 'الاتصال بالدعم',
   },
   health: {

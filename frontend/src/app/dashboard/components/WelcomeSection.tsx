@@ -219,10 +219,10 @@ export default function WelcomeSection() {
               </div>
             </div>
             <div className="flex-1">
-              <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200">
+              <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100">
                 {getGreeting()}, {userProfile?.name || user?.email?.split('@')[0] || 'User'}!
               </h1>
-              <p className="mt-2 text-white/90">Welcome back to BotBrain</p>
+              <p className="mt-2 text-white/90">Welcome back to EdNex Automation</p>
 
               {/* User stats in a row */}
               <div className="flex flex-wrap items-center gap-4 mt-4">

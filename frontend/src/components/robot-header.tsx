@@ -177,7 +177,7 @@ export default function RobotHeader() {
     }
   }, []);
 
-  const imgPath = `/botbot-logo${isDarkMode ? '-white' : ''}.png`;
+  const imgPath = `/ednex-logo${isDarkMode ? '-white' : ''}.png`;
 
   // Easter egg click handler
   const handleLogoClick = useCallback(() => {

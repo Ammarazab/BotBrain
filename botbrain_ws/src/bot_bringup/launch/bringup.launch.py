@@ -20,9 +20,13 @@ def _build_actions(context, *args, **kwargs):
     with open(config_file, 'r') as f:
         config = yaml.safe_load(f)['robot_configuration']
 
-    robot_name = config['robot_name']
-    robot_model = config['robot_model']
-    print(f"Robot name from config: {robot_name}")
+    # Allow CLI overrides (`robot_model:=b2`) and fall back to a sensible
+    # default so an empty robot_config.yaml doesn't blow up with `_pkg`.
+    cli_robot_model = LaunchConfiguration('robot_model').perform(context).strip()
+    cli_robot_name  = LaunchConfiguration('robot_name').perform(context).strip()
+    robot_name  = cli_robot_name  or config.get('robot_name', '')  or ''
+    robot_model = cli_robot_model or config.get('robot_model', '') or 'go2'
+    print(f"Robot name: {robot_name!r}, robot model: {robot_model!r}")
 
     use_sim_str = LaunchConfiguration('use_sim').perform(context).lower()
     use_sim = use_sim_str in ('1', 'true', 'yes')
@@ -126,6 +130,12 @@ def generate_launch_description():
         DeclareLaunchArgument(
             'use_sim', default_value='false',
             description='Run in simulation instead of on real hardware.'),
+        DeclareLaunchArgument(
+            'robot_model', default_value='',
+            description="Override robot model from robot_config.yaml (go2, b2, g1, ...)."),
+        DeclareLaunchArgument(
+            'robot_name', default_value='',
+            description='Override robot namespace from robot_config.yaml.'),
         DeclareLaunchArgument(
             'sim_backend', default_value='gazebo',
             description="When use_sim:=true, choose 'gazebo' or 'isaac'."),

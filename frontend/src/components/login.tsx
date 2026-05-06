@@ -289,8 +289,8 @@ export default function Login() {
         {/* Logo - responsive sizing based on mode */}
         <div className={`shrink-0 transition-all duration-300 ${mode === 'signup' ? 'w-24 h-24 sm:w-32 sm:h-32 mb-4' : 'w-36 h-36 sm:w-48 sm:h-48 mb-6'}`}>
           <Image
-            src="/botbot-logo.png"
-            alt="BotBot Logo"
+            src="/ednex-logo.png"
+            alt="EdNex Automation Logo"
             width={270}
             height={270}
             priority
@@ -561,8 +561,8 @@ export default function Login() {
       <div className="fixed bottom-0 left-0 right-0 z-0 h-32 pointer-events-none hidden lg:block">
         <div className="animate-slide-horizontal">
           <Image
-            src="/bot.png"
-            alt="BotBot Mascot"
+            src="/ednex-icon.png"
+            alt="EdNex Automation Mascot"
             width={120}
             height={120}
             priority

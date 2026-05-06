@@ -358,7 +358,7 @@ export const ptTranslations = {
     mySupportDescription: 'Seu representante de suporte dedicado está aqui para ajudar com qualquer dúvida ou problema.',
     mySupportAvailability: 'Disponível segunda a sexta, 9h às 18h',
     userManualTitle: 'Manual do Usuário',
-    userManualDescription: 'Acesse documentação completa e guias para seu robô BotBrain.',
+    userManualDescription: 'Acesse documentação completa e guias para seu robô EdNex Automation.',
     userManualViewButton: 'Ver Manual do Usuário',
     userManualFormat: 'Formato PDF • Última atualização: Dez 2024',
     safetyTipsTitle: 'Dicas de Segurança Gerais',
@@ -370,7 +370,7 @@ export const ptTranslations = {
     safetyTip3Title: 'Use Dentro das Especificações',
     safetyTip3Description: 'Opere o robô dentro das especificações do fabricante e sempre sob supervisão.',
     additionalHelpTitle: 'Precisa de Mais Ajuda?',
-    additionalHelpDescription: 'Não encontrou o que procura? Nossa equipe de suporte está pronta para ajudar com qualquer dúvida sobre seu BotBrain.',
+    additionalHelpDescription: 'Não encontrou o que procura? Nossa equipe de suporte está pronta para ajudar com qualquer dúvida sobre seu sistema EdNex Automation.',
     additionalHelpContactButton: 'Contatar Suporte',
   },
   health: {

@@ -12,22 +12,41 @@ export default {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
-        primary: 'var(--theme-primary, #821db7)',
-        border: 'var(--theme-border, #230633)',
-        secondary: 'var(--theme-secondary, #e9d0f5)',
-        focus: 'var(--theme-focus, #6e159e)',
-        'action-btn-focus': 'var(--theme-action-btn-focus, #d8bae6)',
-        'pink-lighter': 'var(--theme-clear-pink, #f8eaff)',
-        'focus-shadow': '#0c0112',
-        'clear-pink': 'var(--theme-clear-pink, #F6EFFD)',
-        'clear-gray': 'var(--theme-clear-gray, #dfd8e6)',
-        'clear-gray-2': 'var(--theme-clear-gray-2, #c5becc)',
+        // EdNex Automation brand palette
+        //   blue   #3EA3DC  (primary)
+        //   green  #AFCA0B  (accent)
+        //   red    #D51317  (danger / alert)
+        //   gray   #4A4A49  (neutral text / surfaces)
+        primary: 'var(--theme-primary, #3EA3DC)',
+        border: 'var(--theme-border, #1F5170)',
+        secondary: 'var(--theme-secondary, #d8edf9)',
+        focus: 'var(--theme-focus, #2C8AC2)',
+        'action-btn-focus': 'var(--theme-action-btn-focus, #b9def2)',
+        'pink-lighter': 'var(--theme-clear-pink, #eaf5fc)',
+        'focus-shadow': '#0c1a25',
+        'clear-pink': 'var(--theme-clear-pink, #EFF7FC)',
+        'clear-gray': 'var(--theme-clear-gray, #d6d6d5)',
+        'clear-gray-2': 'var(--theme-clear-gray-2, #b6b6b5)',
+        ednex: {
+          blue: 'var(--theme-primary, #3EA3DC)',
+          green: '#AFCA0B',
+          red: '#D51317',
+          gray: '#4A4A49',
+          dark: 'var(--theme-primary-dark, #1F5170)',
+          darker: 'var(--theme-primary-darker, #0F2A3B)',
+          darkest: 'var(--theme-primary-darkest, #0A1A26)',
+          accent: 'var(--theme-accent, #AFCA0B)',
+        },
+        // Backwards-compat aliases. Existing components still reference
+        // `bg-botbot-purple`, `dark:bg-botbot-darker`, etc.; these map to
+        // the same theme variables so we don't have to mass-rename every
+        // utility class across the codebase.
         botbot: {
-          purple: 'var(--theme-primary, #8A2BE2)',
-          dark: 'var(--theme-primary-dark, #2D1A45)',
-          darker: 'var(--theme-primary-darker, #1A0F29)',
-          darkest: 'var(--theme-primary-darkest, #0F0919)',
-          accent: 'var(--theme-accent, #B388FF)',
+          purple: 'var(--theme-primary, #3EA3DC)',
+          dark: 'var(--theme-primary-dark, #1F5170)',
+          darker: 'var(--theme-primary-darker, #0F2A3B)',
+          darkest: 'var(--theme-primary-darkest, #0A1A26)',
+          accent: 'var(--theme-accent, #AFCA0B)',
         },
       },
       backgroundImage: {

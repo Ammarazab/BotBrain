@@ -27,17 +27,17 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'BotBrain',
-  description: 'BotBrain - Robotics Command and Control System',
+  title: 'EdNex Automation',
+  description: 'EdNex Automation - Robotics Command and Control System',
   openGraph: {
-    title: 'BotBrain',
-    description: 'BotBrain - Robotics Command and Control System',
+    title: 'EdNex Automation',
+    description: 'EdNex Automation - Robotics Command and Control System',
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    title: 'BotBrain',
-    description: 'BotBrain - Robotics Command and Control System',
+    title: 'EdNex Automation',
+    description: 'EdNex Automation - Robotics Command and Control System',
   },
 };
 
